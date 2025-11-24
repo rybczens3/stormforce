@@ -1,0 +1,13 @@
+/*
+Theme Name: Stormforce HTML Mirror
+Theme URI: https://example.com/stormforce
+Author: OpenAI
+Description: WordPress theme generated from the Stormforce static HTML package while preserving the original hierarchy and look.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: stormforce
+*/
+
+/* This stylesheet is intentionally minimal because the theme reuses the bundled CSS assets.
+   WordPress requires the file to register the theme. */
