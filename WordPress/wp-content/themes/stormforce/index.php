@@ -5,8 +5,7 @@
  * @package stormforce
  */
 
-if ( is_front_page() ) {
-    stormforce_render_static_template( 'index.html' );
+if ( is_front_page() && stormforce_render_static_template( 'index.html' ) ) {
     return;
 }
 
