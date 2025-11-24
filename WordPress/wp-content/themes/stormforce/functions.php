@@ -102,14 +102,14 @@ function stormforce_render_static_template( $file_name ) {
 
     if ( ! file_exists( $file_path ) ) {
         echo '<p>' . esc_html__( 'Requested template not found.', 'stormforce' ) . '</p>';
-        return;
+        return false;
     }
 
     $html = file_get_contents( $file_path );
 
     if ( false === $html ) {
         echo '<p>' . esc_html__( 'Unable to load the template.', 'stormforce' ) . '</p>';
-        return;
+        return false;
     }
 
     $html = stormforce_replace_assets( $html );
@@ -131,4 +131,6 @@ function stormforce_render_static_template( $file_name ) {
     echo $middle_segment; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
     wp_footer();
     echo $closing_body_piece; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+
+    return true;
 }
